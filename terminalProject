@@ -1,0 +1,18 @@
+/*Ran this in terminal on Mac but did not know ot to submit. Please let me know if I need to submit a different way."*/
+
+sohailamatya@Mac SWE % mkdir first
+sohailamatya@Mac SWE % cd first
+sohailamatya@Mac first % touch person.txt
+sohailamatya@Mac first % mv person.txt another.txt
+sohailamatya@Mac first % cp another.txt copy.txt
+sohailamatya@Mac first % rm copy.txt
+sohailamatya@Mac first % cp first second
+cp: first: No such file or directory
+sohailamatya@Mac first % cd ..
+sohailamatya@Mac SWE % ls
+first
+sohailamatya@Mac SWE % cp first second
+cp: first is a directory (not copied).
+sohailamatya@Mac SWE % cp -r first second
+sohailamatya@Mac SWE % rm -rf second
+sohailamatya@Mac SWE % 
