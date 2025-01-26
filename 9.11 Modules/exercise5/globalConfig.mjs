@@ -1,0 +1,1 @@
+console.log('This is just content for exercise 5 of the Modules section in Intermediate Javascript');
