@@ -1,0 +1,69 @@
+/* Outer container to hold the entire Pokedex */
+.pokedex-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px;
+  height: 100vh; /* Full height to center everything vertically */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+h1 {
+  color: grey;
+ text-align: center;
+}
+
+/* Grid layout for the Pokemons */
+.pokedex-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+  gap: 20px; /* Space between the grid items */
+  width: 100%; /* Ensures the grid takes full available width */
+  max-width:1200px; /* Limiting max-width for better appearance */
+  margin: 0 auto; /* Centers the grid horizontally */
+}
+
+/* Styling for each individual Pokemon box */
+.pokemon-box {
+  background-color: grey;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.pokemon-box img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+/* Styling for the Pokemon name */
+.pokemon-box h3 {
+  color: blue;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Pokemon type and EXP text */
+.pokemon-box p {
+  color: white;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Responsiveness: Adjust to 2 columns on medium-sized screens */
+@media screen and (max-width: 768px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+}
+
+/* Responsiveness: Adjust to 1 column on smaller screens */
+@media screen and (max-width: 480px) {
+  .pokedex-grid {
+    grid-template-columns: 1fr; /* 1 item per row */
+  }
+}
