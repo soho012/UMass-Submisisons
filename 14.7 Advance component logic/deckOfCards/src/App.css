@@ -1,0 +1,130 @@
+html, body, #root {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #29913a 0%, #153b1e 100%);
+  font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Main container with a soft glassmorphism card look */
+.deck-container {
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 6px 36px rgba(0,0,0,0.22);
+  border-radius: 18px;
+  border: 1.5px solid rgba(255,255,255,0.14);
+  padding: 2.5em 2em 2em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 340px;
+  max-width: 90vw;
+}
+
+.deck-container h2 {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 0.7em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0 1px 6px #153b1e44;
+}
+
+/* Card stack area */
+.card-stack {
+  position: relative;
+  width: 170px;
+  height: 240px;
+  margin-bottom: 1.4em;
+  margin-top: 1.1em;
+}
+
+.card-img {
+  position: absolute;
+  left: 0; top: 0;
+  width: 170px;
+  height: 240px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.22), 0 1.5px 5px rgba(0,0,0,0.13);
+  border-radius: 14px;
+  background: #fff;
+  transition: transform 0.19s, box-shadow 0.21s;
+}
+
+.card-img:nth-child(1) { transform: rotate(-13deg) translateY(13px) scale(0.96);}
+.card-img:nth-child(2) { transform: rotate(0deg) translateY(0px) scale(1);}
+.card-img:nth-child(3) { transform: rotate(11deg) translateY(-13px) scale(1.07);}
+
+/* Big, friendly button styles */
+.draw-btn {
+  background: linear-gradient(90deg, #30343f 60%, #323c3e 100%);
+  color: #fff;
+  border: none;
+  padding: 1.1em 2.9em;
+  font-size: 1.22em;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 1.5em;
+  margin-top: 0.4em;
+  box-shadow: 0 2px 8px rgba(20,40,40,0.14);
+  letter-spacing: 1px;
+  transition: background 0.16s, transform 0.12s, box-shadow 0.19s;
+  outline: none;
+}
+
+.draw-btn:active {
+  background: #191d21;
+  transform: scale(0.98);
+}
+
+.draw-btn:disabled {
+  opacity: 0.5;
+  background: #414446;
+  cursor: not-allowed;
+}
+
+.draw-btn.shuffle {
+  background: linear-gradient(90deg, #1976d2 60%, #19b3c9 100%);
+  color: #fff;
+  margin-bottom: 0.7em;
+  margin-top: 0.6em;
+}
+
+.draw-btn.shuffle:active {
+  background: #0c5aa6;
+}
+
+.cards-remaining {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+  text-shadow: 0 2px 7px #19402541;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .deck-container {
+    min-width: 90vw;
+    padding: 1.1em 0.3em 1.1em 0.3em;
+  }
+  .card-stack {
+    width: 120px;
+    height: 160px;
+  }
+  .card-img {
+    width: 120px;
+    height: 160px;
+    border-radius: 7px;
+  }
+}
