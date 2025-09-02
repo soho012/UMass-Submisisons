@@ -1,0 +1,4 @@
+.nav { position: sticky; top: 0; z-index: 10; background: #0d1430cc; backdrop-filter: blur(6px); border-bottom: 1px solid #1d2550; }
+.row { display: flex; align-items: center; justify-content: space-between; padding: .7rem 0; }
+.brand { font-weight: 800; letter-spacing: .5px; }
+.links a { margin-left: 1rem; }
