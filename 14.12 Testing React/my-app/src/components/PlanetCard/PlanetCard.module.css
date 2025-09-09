@@ -1,5 +1,0 @@
-.card { }
-.header { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
-.header img { width:80px; height:80px; object-fit:cover; border-radius:.6rem; }
-.title { margin:.2rem 0; }
-.meta { opacity:.9 }
