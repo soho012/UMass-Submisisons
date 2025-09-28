@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex Grid Test</title>
+  <style>
+    .pokedex-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .pokemon-box {
+      background-color: grey;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .pokemon-box img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="pokedex-grid">
+    <div class="pokemon-box">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
+      <h3>Charmander</h3>
+      <p>Type: Fire</p>
+      <p>EXP: 62</p>
+    </div>
+    <!-- Add more Pokémon boxes here -->
+  </div>
+</body>
+</html>
